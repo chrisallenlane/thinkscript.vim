@@ -1,0 +1,79 @@
+*thinkscript.vim.txt*   A thinkScript syntax highlighter
+
+                               thinkscript.vim
+                                     ~
+                              Reference Manual
+
+
+==============================================================================
+CONTENTS                                            *thinkscript-vim-contents*
+
+    1. Overview ..............................|thinkscript-vim-overview|
+    2. Installation ..........................|thinkscript-vim-installation|
+    3. Config ................................|thinkscript-vim-config|
+    4. Contributing ..........................|thinkscript-vim-contributing|
+
+
+==============================================================================
+1. Overview                                         *thinkscript-vim-overview*
+
+
+
+`thinkscript.vim` provides syntax-highlighting for the thinkScript language.
+
+
+==============================================================================
+2. Installation                                 *thinkscript-vim-installation*
+
+
+
+`thinkscript.vim` can be installed as described in |packages|, or by using a
+package manager like Pathogen, Vundle, or Plug.
+
+
+==============================================================================
+3. Config                                             *thinkscript-vim-config*
+
+
+
+By convention, thinkScript files have a `.ts` file extension. However, Vim will
+commonly interpret `.ts` files as TypeScript by default. A few workarounds
+are available:
+
+  1.  Use the `.thinkscript` extension
+      Files suffixed with `.thinkscript` will always be handled as
+      thinkScript, and require no further configuration.
+
+  2.  Preface thinkScript files with a modeline
+      You may explicitly specify a `.ts` file as thinkScript by prefacing it
+      with the following modeline:
+
+      `# vim: ft=thinkscript`
+
+  3.  Always handle .ts files as thinkScript
+      You may configure Vim to always handle `.ts` files as thinkScript by
+      adding the following to your |.vimrc|:
+
+      `autocmd BufNewFile,BufRead *.ts set filetype=thinkscript`
+
+
+==============================================================================
+4. Contributing                                 *thinkscript-vim-contributing*
+
+
+
+If you would like to contribute to the development of this plugin, please fork
+its repository on Github and open a pull-request:
+
+  https://github.com/chrisallenlane/thinkscript.vim
+
+If you would like to report a bug or make a feature request, please do so in
+the Github issue tracker:
+
+  https://github.com/chrisallenlane/thinkscript.vim/issues
+
+You may also contact the author of this plugin directly:
+
+  Chris Allen Lane <chris@chris-allen-lane.com>
+
+vim:tw=78:ts=8:noet:ft=help:norl:
